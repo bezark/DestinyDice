@@ -1,0 +1,11 @@
+[gd_resource type="Resource" script_class="Sigil" load_steps=3 format=3 uid="uid://6cx86mpwihwd"]
+
+[ext_resource type="Script" path="res://sigil_data.gd" id="1_a0hml"]
+[ext_resource type="Texture2D" uid="uid://dv2jtwxsr0jab" path="res://Sigils/icons/image.NDT9V2.png" id="1_iw8b3"]
+
+[resource]
+script = ExtResource("1_a0hml")
+title = "WispyTree"
+icon = ExtResource("1_iw8b3")
+miracle_title = "Address the dead"
+miracle_description = "Send a prayer to someone who has passed away, perhaps a note of forgiveness or apology."

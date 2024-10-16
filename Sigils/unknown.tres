@@ -1,0 +1,11 @@
+[gd_resource type="Resource" script_class="Sigil" load_steps=3 format=3 uid="uid://6ecew2sw7nt1"]
+
+[ext_resource type="Texture2D" uid="uid://bvtubhrpnn3re" path="res://icon.svg" id="1_hxr1j"]
+[ext_resource type="Script" path="res://sigil_data.gd" id="1_rwuvp"]
+
+[resource]
+script = ExtResource("1_rwuvp")
+title = "unknown"
+icon = ExtResource("1_hxr1j")
+miracle_title = "???"
+miracle_description = "?????????"

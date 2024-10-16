@@ -1,0 +1,53 @@
+[gd_scene load_steps=6 format=3 uid="uid://cqwdt7pc0e641"]
+
+[ext_resource type="Script" path="res://dice.gd" id="1_ecji5"]
+[ext_resource type="Texture2D" uid="uid://bvtubhrpnn3re" path="res://icon.svg" id="1_entoh"]
+[ext_resource type="FontFile" uid="uid://dbbyktau8gupv" path="res://Sigils/Play Chickens.ttf" id="3_obnai"]
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_5uu3v"]
+bg_color = Color(1, 1, 1, 1)
+border_width_left = 10
+border_width_top = 10
+border_width_right = 10
+border_width_bottom = 10
+border_color = Color(0, 0, 0, 1)
+corner_radius_top_left = 20
+corner_radius_top_right = 20
+corner_radius_bottom_right = 20
+corner_radius_bottom_left = 20
+
+[sub_resource type="LabelSettings" id="LabelSettings_u3ehj"]
+line_spacing = 0.0
+font = ExtResource("3_obnai")
+font_size = 28
+font_color = Color(0, 0, 0, 1)
+
+[node name="Dice" type="PanelContainer"]
+custom_minimum_size = Vector2(200, 200)
+offset_right = 40.0
+offset_bottom = 40.0
+theme_override_styles/panel = SubResource("StyleBoxFlat_5uu3v")
+script = ExtResource("1_ecji5")
+
+[node name="MarginContainer" type="MarginContainer" parent="."]
+layout_mode = 2
+theme_override_constants/margin_left = 10
+theme_override_constants/margin_top = 10
+theme_override_constants/margin_right = 10
+theme_override_constants/margin_bottom = 10
+
+[node name="Sigil" type="TextureRect" parent="MarginContainer"]
+custom_minimum_size = Vector2(50, 50)
+layout_mode = 2
+size_flags_horizontal = 8
+size_flags_vertical = 0
+texture = ExtResource("1_entoh")
+expand_mode = 1
+
+[node name="Text" type="Label" parent="MarginContainer"]
+custom_minimum_size = Vector2(150, 0)
+layout_mode = 2
+text = "BILLY"
+label_settings = SubResource("LabelSettings_u3ehj")
+horizontal_alignment = 1
+autowrap_mode = 2

@@ -1,0 +1,11 @@
+[gd_resource type="Resource" script_class="Sigil" load_steps=3 format=3 uid="uid://crlg8102llult"]
+
+[ext_resource type="Script" path="res://sigil_data.gd" id="1_7nrm2"]
+[ext_resource type="Texture2D" uid="uid://b8o1y5bhdwgfm" path="res://Sigils/icons/image.VA12V2.png" id="1_mgue4"]
+
+[resource]
+script = ExtResource("1_7nrm2")
+title = "Heart"
+icon = ExtResource("1_mgue4")
+miracle_title = "Send a Love Letter"
+miracle_description = "A platonic or romantic letter expressing of appreciation they haven’t heard before. Can bewritten or oral."

@@ -1,0 +1,11 @@
+[gd_resource type="Resource" script_class="Sigil" load_steps=3 format=3 uid="uid://b0eexgo08ekls"]
+
+[ext_resource type="Script" path="res://sigil_data.gd" id="1_1ns2m"]
+[ext_resource type="Texture2D" uid="uid://53jpcunmjklo" path="res://Sigils/icons/image.TF79V2.png" id="1_yvjs2"]
+
+[resource]
+script = ExtResource("1_1ns2m")
+title = "wrt"
+icon = ExtResource("1_yvjs2")
+miracle_title = "Bubble Bath, Baby"
+miracle_description = "As soon as possible, take a bubble bath with music and candles."

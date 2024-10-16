@@ -1,0 +1,11 @@
+[gd_resource type="Resource" script_class="Sigil" load_steps=3 format=3 uid="uid://cx25cdw5xeya6"]
+
+[ext_resource type="Texture2D" uid="uid://cdo3qc24mq7d5" path="res://Sigils/icons/image.QLMBW2.png" id="1_0oauc"]
+[ext_resource type="Script" path="res://sigil_data.gd" id="1_35h7v"]
+
+[resource]
+script = ExtResource("1_35h7v")
+title = "Bird"
+icon = ExtResource("1_0oauc")
+miracle_title = "Immediately start something you’ve been procrastinating"
+miracle_description = "Self-Explanatory"

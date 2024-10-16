@@ -1,0 +1,7 @@
+[gd_resource type="LabelSettings" load_steps=2 format=3 uid="uid://swtsqdnf5tn6"]
+
+[ext_resource type="FontFile" uid="uid://dsedwa8ek4mxs" path="res://RusticShine.ttf" id="1_fn87q"]
+
+[resource]
+font = ExtResource("1_fn87q")
+font_size = 124

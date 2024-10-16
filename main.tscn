@@ -1,0 +1,301 @@
+[gd_scene load_steps=38 format=3 uid="uid://cr0evywduebeh"]
+
+[ext_resource type="PackedScene" uid="uid://cqwdt7pc0e641" path="res://dice.tscn" id="1_phtx7"]
+[ext_resource type="Script" path="res://main.gd" id="1_w3vso"]
+[ext_resource type="FontFile" uid="uid://dsedwa8ek4mxs" path="res://RusticShine.ttf" id="2_f3doa"]
+[ext_resource type="LabelSettings" uid="uid://swtsqdnf5tn6" path="res://Title.tres" id="2_jddl5"]
+[ext_resource type="Script" path="res://face_data.gd" id="2_qmt54"]
+[ext_resource type="Resource" uid="uid://crlg8102llult" path="res://Sigils/heart.tres" id="3_cm1jc"]
+[ext_resource type="Resource" uid="uid://cx25cdw5xeya6" path="res://Sigils/bird.tres" id="4_jg56d"]
+[ext_resource type="Resource" uid="uid://cr2lxhlvt5j5" path="res://Sigils/unicorn.tres" id="5_frrpo"]
+[ext_resource type="Resource" uid="uid://b0eexgo08ekls" path="res://Sigils/wrt.tres" id="6_pwpia"]
+[ext_resource type="Resource" uid="uid://6cx86mpwihwd" path="res://Sigils/wispytree.tres" id="7_sx0il"]
+[ext_resource type="Resource" uid="uid://6ecew2sw7nt1" path="res://Sigils/unknown.tres" id="8_bp0jc"]
+[ext_resource type="LabelSettings" uid="uid://dkyjh8owekp7u" path="res://decree.tres" id="11_npq86"]
+
+[sub_resource type="Theme" id="Theme_eya10"]
+Label/font_sizes/font_size = 32
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_ci5ij"]
+bg_color = Color(0.541371, 0.55311, 0.933535, 1)
+border_width_left = 4
+border_width_top = 4
+border_width_right = 4
+border_width_bottom = 4
+border_color = Color(0, 0, 0, 1)
+corner_radius_top_left = 16
+corner_radius_top_right = 16
+corner_radius_bottom_right = 16
+corner_radius_bottom_left = 16
+
+[sub_resource type="Resource" id="Resource_7hsjb"]
+script = ExtResource("2_qmt54")
+text = "GIVE"
+sigil = ExtResource("3_cm1jc")
+
+[sub_resource type="Resource" id="Resource_apxf5"]
+script = ExtResource("2_qmt54")
+text = "ASK"
+sigil = ExtResource("4_jg56d")
+
+[sub_resource type="Resource" id="Resource_sib3b"]
+script = ExtResource("2_qmt54")
+text = "GIVE"
+sigil = ExtResource("5_frrpo")
+
+[sub_resource type="Resource" id="Resource_6j5gn"]
+script = ExtResource("2_qmt54")
+text = "ASK"
+sigil = ExtResource("7_sx0il")
+
+[sub_resource type="Resource" id="Resource_iq8ot"]
+script = ExtResource("2_qmt54")
+text = "GIVE"
+sigil = ExtResource("6_pwpia")
+
+[sub_resource type="Resource" id="Resource_275en"]
+script = ExtResource("2_qmt54")
+text = "ASK"
+sigil = ExtResource("8_bp0jc")
+
+[sub_resource type="Resource" id="Resource_km5ix"]
+script = ExtResource("2_qmt54")
+text = "A Friend"
+sigil = ExtResource("3_cm1jc")
+
+[sub_resource type="Resource" id="Resource_wvyb3"]
+script = ExtResource("2_qmt54")
+text = "A Family Member"
+sigil = ExtResource("6_pwpia")
+
+[sub_resource type="Resource" id="Resource_1q6ja"]
+script = ExtResource("2_qmt54")
+text = "A Stranger"
+sigil = ExtResource("7_sx0il")
+
+[sub_resource type="Resource" id="Resource_fcn04"]
+script = ExtResource("2_qmt54")
+text = "The First Person You See"
+sigil = ExtResource("5_frrpo")
+
+[sub_resource type="Resource" id="Resource_fkns8"]
+script = ExtResource("2_qmt54")
+text = "BILLY"
+sigil = ExtResource("4_jg56d")
+
+[sub_resource type="Resource" id="Resource_ihccr"]
+script = ExtResource("2_qmt54")
+text = "God I Guess"
+sigil = ExtResource("8_bp0jc")
+
+[sub_resource type="Resource" id="Resource_e1361"]
+script = ExtResource("2_qmt54")
+text = "A Compliment"
+sigil = ExtResource("5_frrpo")
+
+[sub_resource type="Resource" id="Resource_isoah"]
+script = ExtResource("2_qmt54")
+text = "A Question"
+sigil = ExtResource("3_cm1jc")
+
+[sub_resource type="Resource" id="Resource_l73gy"]
+script = ExtResource("2_qmt54")
+text = "Time"
+sigil = ExtResource("4_jg56d")
+
+[sub_resource type="Resource" id="Resource_cd7wi"]
+script = ExtResource("2_qmt54")
+text = "Help"
+sigil = ExtResource("8_bp0jc")
+
+[sub_resource type="Resource" id="Resource_7maro"]
+script = ExtResource("2_qmt54")
+text = "Something Weird and Interesting"
+sigil = ExtResource("7_sx0il")
+
+[sub_resource type="Resource" id="Resource_2r581"]
+script = ExtResource("2_qmt54")
+text = "To Dance"
+sigil = ExtResource("6_pwpia")
+
+[sub_resource type="Animation" id="Animation_1rlpe"]
+resource_name = "RollDice"
+length = 2.0
+tracks/0/type = "method"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath(".")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0.166667, 1.63333),
+"transitions": PackedFloat32Array(1, 1),
+"values": [{
+"args": [],
+"method": &"roll_dice"
+}, {
+"args": [],
+"method": &"tabulate_results"
+}]
+}
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_vepxf"]
+_data = {
+"RollDice": SubResource("Animation_1rlpe")
+}
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_m34rj"]
+bg_color = Color(0.0313726, 0.0313726, 0.0313726, 0.894118)
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_xqsed"]
+bg_color = Color(0, 0.6, 0.823529, 1)
+border_width_left = 4
+border_width_top = 4
+border_width_right = 4
+border_width_bottom = 4
+border_color = Color(0.961921, 0.779316, 0, 1)
+corner_radius_top_left = 20
+corner_radius_top_right = 20
+corner_radius_bottom_right = 20
+corner_radius_bottom_left = 20
+
+[sub_resource type="PlaceholderTexture2D" id="PlaceholderTexture2D_ab5wc"]
+size = Vector2(400, 400)
+
+[node name="Main" type="Control"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+theme = SubResource("Theme_eya10")
+script = ExtResource("1_w3vso")
+
+[node name="PanelContainer" type="PanelContainer" parent="."]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_styles/panel = SubResource("StyleBoxFlat_ci5ij")
+
+[node name="MarginContainer" type="MarginContainer" parent="PanelContainer"]
+layout_mode = 2
+theme_override_constants/margin_left = 40
+theme_override_constants/margin_top = 100
+theme_override_constants/margin_right = 40
+theme_override_constants/margin_bottom = 100
+
+[node name="VBoxContainer" type="VBoxContainer" parent="PanelContainer/MarginContainer"]
+layout_mode = 2
+theme_override_constants/separation = 40
+alignment = 1
+
+[node name="Destiny Dice" type="Label" parent="PanelContainer/MarginContainer/VBoxContainer"]
+layout_mode = 2
+text = "DESTINY DICE"
+label_settings = ExtResource("2_jddl5")
+horizontal_alignment = 1
+
+[node name="DiceBox" type="HBoxContainer" parent="PanelContainer/MarginContainer/VBoxContainer"]
+layout_mode = 2
+size_flags_vertical = 10
+
+[node name="Dice" parent="PanelContainer/MarginContainer/VBoxContainer/DiceBox" instance=ExtResource("1_phtx7")]
+layout_mode = 2
+size_flags_horizontal = 6
+faces = Array[ExtResource("2_qmt54")]([SubResource("Resource_7hsjb"), SubResource("Resource_apxf5"), SubResource("Resource_sib3b"), SubResource("Resource_6j5gn"), SubResource("Resource_iq8ot"), SubResource("Resource_275en")])
+
+[node name="Dice2" parent="PanelContainer/MarginContainer/VBoxContainer/DiceBox" instance=ExtResource("1_phtx7")]
+layout_mode = 2
+size_flags_horizontal = 6
+faces = Array[ExtResource("2_qmt54")]([SubResource("Resource_km5ix"), SubResource("Resource_wvyb3"), SubResource("Resource_1q6ja"), SubResource("Resource_fcn04"), SubResource("Resource_fkns8"), SubResource("Resource_ihccr")])
+
+[node name="Dice3" parent="PanelContainer/MarginContainer/VBoxContainer/DiceBox" instance=ExtResource("1_phtx7")]
+layout_mode = 2
+size_flags_horizontal = 6
+faces = Array[ExtResource("2_qmt54")]([SubResource("Resource_e1361"), SubResource("Resource_isoah"), SubResource("Resource_l73gy"), SubResource("Resource_cd7wi"), SubResource("Resource_7maro"), SubResource("Resource_2r581")])
+
+[node name="Destiny" type="Label" parent="PanelContainer/MarginContainer/VBoxContainer"]
+custom_minimum_size = Vector2(800, 0)
+layout_mode = 2
+text = "This is Your Destiny"
+label_settings = ExtResource("11_npq86")
+horizontal_alignment = 1
+autowrap_mode = 2
+
+[node name="Button" type="Button" parent="PanelContainer/MarginContainer/VBoxContainer"]
+layout_mode = 2
+size_flags_vertical = 10
+theme_override_fonts/font = ExtResource("2_f3doa")
+theme_override_font_sizes/font_size = 128
+text = "ROLL EM!"
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="."]
+libraries = {
+"": SubResource("AnimationLibrary_vepxf")
+}
+
+[node name="MiracleLayer" type="CanvasLayer" parent="."]
+
+[node name="Miracle" type="Panel" parent="MiracleLayer"]
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_styles/panel = SubResource("StyleBoxFlat_m34rj")
+
+[node name="PanelContainer" type="PanelContainer" parent="MiracleLayer/Miracle"]
+custom_minimum_size = Vector2(600, 1000)
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_styles/panel = SubResource("StyleBoxFlat_xqsed")
+
+[node name="MarginContainer" type="MarginContainer" parent="MiracleLayer/Miracle/PanelContainer"]
+layout_mode = 2
+theme_override_constants/margin_left = 20
+theme_override_constants/margin_top = 20
+theme_override_constants/margin_right = 20
+theme_override_constants/margin_bottom = 20
+
+[node name="VBoxContainer" type="VBoxContainer" parent="MiracleLayer/Miracle/PanelContainer/MarginContainer"]
+layout_mode = 2
+
+[node name="Title" type="Label" parent="MiracleLayer/Miracle/PanelContainer/MarginContainer/VBoxContainer"]
+custom_minimum_size = Vector2(800, 0)
+layout_mode = 2
+text = "HOLY MIRACLE"
+label_settings = ExtResource("2_jddl5")
+horizontal_alignment = 1
+autowrap_mode = 2
+
+[node name="TextureRect" type="TextureRect" parent="MiracleLayer/Miracle/PanelContainer/MarginContainer/VBoxContainer"]
+layout_mode = 2
+texture = SubResource("PlaceholderTexture2D_ab5wc")
+
+[node name="Decree" type="Label" parent="MiracleLayer/Miracle/PanelContainer/MarginContainer/VBoxContainer"]
+custom_minimum_size = Vector2(800, 0)
+layout_mode = 2
+text = "This is what you do"
+label_settings = ExtResource("11_npq86")
+horizontal_alignment = 1
+autowrap_mode = 2
+
+[node name="MiracleButton" type="Button" parent="MiracleLayer/Miracle/PanelContainer/MarginContainer/VBoxContainer"]
+layout_mode = 2
+size_flags_vertical = 10
+theme_override_fonts/font = ExtResource("2_f3doa")
+theme_override_font_sizes/font_size = 128
+text = "OK"
+
+[connection signal="button_down" from="PanelContainer/MarginContainer/VBoxContainer/Button" to="." method="_on_button_button_down"]
+[connection signal="button_down" from="MiracleLayer/Miracle/PanelContainer/MarginContainer/VBoxContainer/MiracleButton" to="." method="_on_miracle_button_button_down"]

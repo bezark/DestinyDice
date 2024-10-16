@@ -1,0 +1,11 @@
+[gd_resource type="Resource" script_class="Sigil" load_steps=3 format=3 uid="uid://cr2lxhlvt5j5"]
+
+[ext_resource type="Texture2D" uid="uid://clufse1cutbdf" path="res://Sigils/icons/image.65V2V2.png" id="1_jtvov"]
+[ext_resource type="Script" path="res://sigil_data.gd" id="1_xv6yd"]
+
+[resource]
+script = ExtResource("1_xv6yd")
+title = "Unicorn"
+icon = ExtResource("1_jtvov")
+miracle_title = "Permission to Quit"
+miracle_description = "Identify a negative commitment you’ve made and, if you feel you can’t transform it, quit it today.OR identify something that negatively eﬀects you on a daily basis and change it/remove it."
