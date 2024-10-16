@@ -239,6 +239,7 @@ libraries = {
 }
 
 [node name="MiracleLayer" type="CanvasLayer" parent="."]
+visible = false
 
 [node name="Miracle" type="Panel" parent="MiracleLayer"]
 anchors_preset = 15
